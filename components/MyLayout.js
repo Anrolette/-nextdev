@@ -30,19 +30,26 @@ Have a look at ./pages/index.js to see where we pass props through to this Layou
 const Layout = (props) => (
   <div>
     <Head>
+    {/* Global site tag (gtag.js) - Google Analytics */}
+<script 
+dangerouslySetInnerHTML={{ __html: 
+`async src="https://www.googletagmanager.com/gtag/js?id=G-XEXHM0BFXL"`
+}}></script>
+<script
+dangerouslySetInnerHTML={{ __html:
+  `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XEXHM0BFXL');`
+}}>
+</script>
       <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossOrigin="anonymous"
       />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEXHM0BFXL"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
-        gtag('config', 'G-XEXHM0BFXL');
-      </script>
     </Head>
     <div style={layoutStyle}>
       <Header />
