@@ -39,16 +39,18 @@ const Layout = (props) => (
 
   <script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=G-XEXHM0BFXL"
+    src="https://www.googletagmanager.com/gtag/js?id=UA-195829162-1"
   />
 
   <script
     dangerouslySetInnerHTML={{
       __html: `
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){
+              dataLayer.push(arguments);
+            }
             gtag('js', new Date());
-            gtag('config', 'G-XEXHM0BFXL');
+            gtag('config', 'UA-195829162-1');
         `,
     }}
   />
